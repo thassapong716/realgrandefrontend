@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 let corspolicy = {
-    "origin": "http://localhost:3000"
+    "origin": process.env.FrontendURI
 }
 app.use(cors(corspolicy));
 app.use(express.json());
